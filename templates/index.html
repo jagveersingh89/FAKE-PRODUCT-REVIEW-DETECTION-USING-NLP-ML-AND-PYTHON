@@ -5,338 +5,256 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>
         AI Fake Review Detection System
     </title>
 
-    <link rel="stylesheet"
-    href="{{ url_for('static', filename='style.css') }}">
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
 
-    <link rel="preconnect"
-    href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
 </head>
 
 <body>
 
-<div class="animated-bg"></div>
+    <div class="main-container">
 
-<div class="main-container">
+        <div class="glass-card">
 
-<div class="glass-card">
+            <div class="header-section">
 
-<div class="hero-section">
+                <h1>
+                    AI Fake Review Detection
+                </h1>
 
-<div class="hero-badge">
-AI Powered Machine Learning System
-</div>
+                <p>
+                    Advanced Machine Learning Based Review Analyzer
+                </p>
 
-<h1>
-Fake Review Detection System
-</h1>
+            </div>
 
-<p>
-Advanced Artificial Intelligence platform for detecting
-fake, suspicious and genuine product reviews using
-Natural Language Processing, Sentiment Analysis
-and Behavioral Pattern Analysis.
-</p>
+            <form
+                action="/predict"
+                method="POST"
+            >
 
-</div>
+                <div class="input-group">
 
-<form action="/predict" method="POST">
+                    <label>
+                        Product Review
+                    </label>
 
-<div class="section-title">
+                    <textarea
+                        name="review"
+                        placeholder="Write product review here..."
+                        required
+                    ></textarea>
 
-Review Information
+                </div>
 
-</div>
+                <div class="grid-container">
 
-<div class="input-group">
+                    <div class="input-group">
 
-<label>
-Review Text
-</label>
+                        <label>
+                            Product Category
+                        </label>
 
-<textarea
-name="review"
-placeholder="Write or paste product review here..."
-required>
-</textarea>
+                        <select
+                            name="category"
+                            required
+                        >
 
-</div>
+                            <option value="">
+                                Select Category
+                            </option>
 
-<div class="grid-2">
+                            <option>Electronics</option>
+                            <option>Mobile</option>
+                            <option>Laptop</option>
+                            <option>Fashion</option>
+                            <option>Beauty</option>
+                            <option>Sports</option>
+                            <option>Gaming</option>
+                            <option>Books</option>
+                            <option>Home Appliances</option>
+                            <option>Furniture</option>
+                            <option>Grocery</option>
+                            <option>Health</option>
+                            <option>Automobile</option>
+                            <option>Toys</option>
 
-<div class="input-group">
+                        </select>
 
-<label>
-Product Category
-</label>
+                    </div>
 
-<select name="category" required>
+                    <div class="input-group">
 
-<option value="" disabled selected>
-Select Product Category
-</option>
+                        <label>
+                            Product Rating
+                        </label>
 
-<option>Electronics</option>
-<option>Mobile Phones</option>
-<option>Laptops</option>
-<option>Gaming</option>
-<option>Fashion</option>
-<option>Beauty</option>
-<option>Kitchen</option>
-<option>Furniture</option>
-<option>Books</option>
-<option>Sports</option>
-<option>Health</option>
-<option>Fitness</option>
-<option>Automobile</option>
-<option>Jewelry</option>
-<option>Groceries</option>
-<option>Toys</option>
-<option>Pet Supplies</option>
-<option>Home Appliances</option>
-<option>Smart Gadgets</option>
+                        <select
+                            name="rating"
+                            required
+                        >
 
-</select>
+                            <option value="">
+                                Select Rating
+                            </option>
 
-</div>
+                            <option value="1">
+                                ⭐ 1 Star
+                            </option>
 
-<div class="input-group">
+                            <option value="2">
+                                ⭐⭐ 2 Stars
+                            </option>
 
-<label>
-Product Rating
-</label>
+                            <option value="3">
+                                ⭐⭐⭐ 3 Stars
+                            </option>
 
-<select name="rating" required>
+                            <option value="4">
+                                ⭐⭐⭐⭐ 4 Stars
+                            </option>
 
-<option value="" disabled selected>
-Select Product Rating
-</option>
+                            <option value="5">
+                                ⭐⭐⭐⭐⭐ 5 Stars
+                            </option>
 
-<option value="1">
-⭐ 1 Star
-</option>
+                        </select>
 
-<option value="2">
-⭐⭐ 2 Stars
-</option>
+                    </div>
 
-<option value="3">
-⭐⭐⭐ 3 Stars
-</option>
+                </div>
 
-<option value="4">
-⭐⭐⭐⭐ 4 Stars
-</option>
+                <div class="grid-container">
 
-<option value="5">
-⭐⭐⭐⭐⭐ 5 Stars
-</option>
+                    <div class="input-group">
 
-</select>
+                        <label>
+                            Account Age
+                        </label>
 
-</div>
+                        <select
+                            name="account_age"
+                            required
+                        >
 
-</div>
+                            <option value="">
+                                Select Account Age
+                            </option>
 
-<div class="section-title">
+                            <option value="15">
+                                Less than 1 Month
+                            </option>
 
-User Behavioral Analysis
+                            <option value="60">
+                                1 - 3 Months
+                            </option>
 
-</div>
+                            <option value="180">
+                                3 - 6 Months
+                            </option>
 
-<div class="grid-3">
+                            <option value="365">
+                                6 Months - 1 Year
+                            </option>
 
-<div class="input-group">
+                            <option value="730">
+                                More than 1 Year
+                            </option>
 
-<label>
-Account Age
-</label>
+                        </select>
 
-<select name="account_age" required>
+                    </div>
 
-<option value="" disabled selected>
-Select Account Age
-</option>
+                    <div class="input-group">
 
-<option value="7">
-Less Than 1 Week
-</option>
+                        <label>
+                            Verified Purchase
+                        </label>
 
-<option value="30">
-Less Than 1 Month
-</option>
+                        <select
+                            name="verified_purchase"
+                            required
+                        >
 
-<option value="90">
-1 - 3 Months
-</option>
+                            <option value="">
+                                Select Option
+                            </option>
 
-<option value="180">
-3 - 6 Months
-</option>
+                            <option>
+                                Yes
+                            </option>
 
-<option value="365">
-6 - 12 Months
-</option>
+                            <option>
+                                No
+                            </option>
 
-<option value="730">
-1 - 2 Years
-</option>
+                        </select>
 
-<option value="1500">
-More Than 2 Years
-</option>
+                    </div>
 
-</select>
+                </div>
 
-</div>
+                <div class="grid-container">
 
-<div class="input-group">
+                    <div class="input-group">
 
-<label>
-Helpful Votes
-</label>
+                        <label>
+                            Helpful Votes
+                        </label>
 
-<input
-type="number"
-name="helpful_votes"
-placeholder="Example: 15"
-required>
+                        <input
+                            type="number"
+                            name="helpful_votes"
+                            placeholder="Enter helpful votes"
+                            required
+                        >
 
-</div>
+                    </div>
 
-<div class="input-group">
+                    <div class="input-group">
 
-<label>
-User Review Count
-</label>
+                        <label>
+                            User Review Count
+                        </label>
 
-<input
-type="number"
-name="review_count"
-placeholder="Example: 25"
-required>
+                        <input
+                            type="number"
+                            name="review_count"
+                            placeholder="Enter total reviews"
+                            required
+                        >
 
-</div>
+                    </div>
 
-</div>
+                </div>
 
-<div class="grid-2">
+                <button type="submit">
 
-<div class="input-group">
+                    Analyze Review
 
-<label>
-Verified Purchase
-</label>
+                </button>
 
-<select
-name="verified_purchase"
-required>
+            </form>
 
-<option value="" disabled selected>
-Select Verification Status
-</option>
+        </div>
 
-<option>
-Yes
-</option>
-
-<option>
-No
-</option>
-
-</select>
-
-</div>
-
-<div class="input-group">
-
-<label>
-Review Posting Frequency
-</label>
-
-<select
-name="posting_frequency"
-required>
-
-<option value="" disabled selected>
-Select Posting Frequency
-</option>
-
-<option>
-Very Rare
-</option>
-
-<option>
-Occasional
-</option>
-
-<option>
-Frequent
-</option>
-
-<option>
-Very Frequent
-</option>
-
-</select>
-
-</div>
-
-</div>
-
-<div class="features-box">
-
-<div class="feature-item">
-✔ NLP Text Analysis
-</div>
-
-<div class="feature-item">
-✔ Sentiment Detection
-</div>
-
-<div class="feature-item">
-✔ Behavioral Monitoring
-</div>
-
-<div class="feature-item">
-✔ Fake Pattern Recognition
-</div>
-
-<div class="feature-item">
-✔ AI Trust Scoring
-</div>
-
-<div class="feature-item">
-✔ Machine Learning Prediction
-</div>
-
-</div>
-
-<button type="submit">
-
-Analyze Review With AI
-
-</button>
-
-</form>
-
-</div>
-
-</div>
+    </div>
 
 </body>
 

@@ -5,266 +5,364 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>
-        AI Review Analysis
+        Analysis Result
     </title>
 
-    <link rel="stylesheet"
-    href="{{ url_for('static', filename='style.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-    <link rel="preconnect"
-    href="https://fonts.googleapis.com">
+    <style>
 
-    <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
+        body{
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+            margin:0;
+            padding:40px;
+
+            font-family:'Poppins',sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #111827,
+                    #1e293b
+                );
+
+            min-height:100vh;
+        }
+
+        .container{
+
+            max-width:1200px;
+
+            margin:auto;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            backdrop-filter:blur(18px);
+
+            border-radius:30px;
+
+            padding:45px;
+
+            box-shadow:
+                0 0 40px rgba(0,0,0,0.5);
+        }
+
+        h1{
+
+            text-align:center;
+
+            color:white;
+
+            font-size:50px;
+
+            margin-bottom:40px;
+        }
+
+        .main-result{
+
+            text-align:center;
+
+            padding:25px;
+
+            border-radius:20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #22c55e,
+                    #16a34a
+                );
+
+            color:white;
+
+            font-size:36px;
+
+            font-weight:700;
+
+            margin-bottom:40px;
+        }
+
+        .score-grid{
+
+            display:grid;
+
+            grid-template-columns:
+                repeat(auto-fit,minmax(250px,1fr));
+
+            gap:25px;
+
+            margin-bottom:40px;
+        }
+
+        .score-card{
+
+            padding:35px;
+
+            border-radius:25px;
+
+            text-align:center;
+
+            color:white;
+        }
+
+        .fake{
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ef4444,
+                    #dc2626
+                );
+        }
+
+        .suspicious{
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f59e0b,
+                    #d97706
+                );
+        }
+
+        .genuine{
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #22c55e,
+                    #16a34a
+                );
+        }
+
+        .score-card h2{
+
+            font-size:28px;
+
+            margin-bottom:15px;
+        }
+
+        .score-card p{
+
+            font-size:55px;
+
+            font-weight:700;
+        }
+
+        .details{
+
+            background:
+                rgba(255,255,255,0.06);
+
+            padding:35px;
+
+            border-radius:25px;
+        }
+
+        .details h2{
+
+            color:white;
+
+            margin-bottom:25px;
+
+            font-size:35px;
+        }
+
+        .details p{
+
+            color:#e5e7eb;
+
+            font-size:19px;
+
+            margin-bottom:15px;
+
+            line-height:1.7;
+        }
+
+        .review-box{
+
+            margin-top:30px;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            padding:30px;
+
+            border-radius:20px;
+        }
+
+        .review-box h3{
+
+            color:white;
+
+            margin-bottom:15px;
+
+            font-size:28px;
+        }
+
+        .review-box p{
+
+            color:#d1d5db;
+
+            line-height:1.8;
+
+            font-size:18px;
+        }
+
+        .btn{
+
+            display:inline-block;
+
+            margin-top:40px;
+
+            padding:18px 35px;
+
+            border-radius:15px;
+
+            text-decoration:none;
+
+            color:white;
+
+            font-size:20px;
+
+            font-weight:600;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #3b82f6,
+                    #2563eb
+                );
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-<div class="animated-bg"></div>
+    <div class="container">
 
-<div class="main-container">
+        <h1>
+            AI Review Analysis Result
+        </h1>
 
-<div class="result-card">
+        <div class="main-result">
 
-<div class="result-header">
+            {{ result }}
 
-<h1>
-AI Review Analysis Report
-</h1>
+        </div>
 
-<p>
-Machine Learning Based Fake Review Detection
-</p>
+        <div class="score-grid">
 
-</div>
+            <div class="score-card fake">
 
-<!-- Main Result -->
+                <h2>
+                    Fake Score
+                </h2>
 
-{% if result == "Fake Review" %}
+                <p>
+                    {{ fake_score }}%
+                </p>
 
-<div class="result-banner fake-banner">
+            </div>
 
-<h2>
-⚠ Fake Review Detected
-</h2>
+            <div class="score-card suspicious">
 
-<p>
-This review contains suspicious behavioral
-and linguistic patterns.
-</p>
+                <h2>
+                    Suspicious Score
+                </h2>
 
-</div>
+                <p>
+                    {{ suspicious_score }}%
+                </p>
 
-{% elif result == "Suspicious Review" %}
+            </div>
 
-<div class="result-banner suspicious-banner">
+            <div class="score-card genuine">
 
-<h2>
-⚡ Suspicious Review
-</h2>
+                <h2>
+                    Genuine Score
+                </h2>
 
-<p>
-This review requires manual verification.
-</p>
+                <p>
+                    {{ genuine_score }}%
+                </p>
 
-</div>
+            </div>
 
-{% else %}
+        </div>
 
-<div class="result-banner genuine-banner">
+        <div class="details">
 
-<h2>
-✔ Genuine Review
-</h2>
+            <h2>
+                Review Details
+            </h2>
 
-<p>
-This review appears authentic and trustworthy.
-</p>
+            <p>
+                <strong>Category:</strong>
+                {{ category }}
+            </p>
 
-</div>
+            <p>
+                <strong>Rating:</strong>
+                {{ rating }}/5
+            </p>
 
-{% endif %}
+            <p>
+                <strong>Account Age:</strong>
+                {{ account_age }} Days
+            </p>
 
-<!-- Scores -->
+            <p>
+                <strong>Helpful Votes:</strong>
+                {{ helpful_votes }}
+            </p>
 
-<div class="score-grid">
+            <p>
+                <strong>Recommendation:</strong>
+                {{ recommendation }}
+            </p>
 
-<div class="score-card fake-score">
+            <div class="review-box">
 
-<h3>
-Fake Score
-</h3>
+                <h3>
+                    User Review
+                </h3>
 
-<p>
-{{ fake_probability }}%
-</p>
+                <p>
+                    {{ review }}
+                </p>
 
-</div>
+            </div>
 
-<div class="score-card suspicious-score">
+        </div>
 
-<h3>
-Suspicious Score
-</h3>
+        <center>
 
-<p>
-{{ suspicious_probability }}%
-</p>
+            <a
+                href="/"
+                class="btn"
+            >
 
-</div>
+                Analyze Another Review
 
-<div class="score-card genuine-score">
+            </a>
 
-<h3>
-Genuine Score
-</h3>
+        </center>
 
-<p>
-{{ genuine_probability }}%
-</p>
-
-</div>
-
-</div>
-
-<!-- Recommendation -->
-
-<div class="recommendation-section">
-
-<h2>
-Overall Recommendation
-</h2>
-
-<p>
-{{ recommendation }}
-</p>
-
-</div>
-
-<!-- Details -->
-
-<div class="details-grid">
-
-<div class="detail-box">
-
-<h3>
-Category
-</h3>
-
-<p>
-{{ category }}
-</p>
-
-</div>
-
-<div class="detail-box">
-
-<h3>
-Rating
-</h3>
-
-<p>
-{{ rating }} ⭐
-</p>
-
-</div>
-
-<div class="detail-box">
-
-<h3>
-Account Age
-</h3>
-
-<p>
-{{ account_age }} Days
-</p>
-
-</div>
-
-<div class="detail-box">
-
-<h3>
-Helpful Votes
-</h3>
-
-<p>
-{{ helpful_votes }}
-</p>
-
-</div>
-
-</div>
-
-<!-- Review -->
-
-<div class="review-section">
-
-<h2>
-Review Content
-</h2>
-
-<p>
-{{ review }}
-</p>
-
-</div>
-
-<!-- Analysis -->
-
-<div class="analysis-section">
-
-<h2>
-AI Analysis Completed
-</h2>
-
-<div class="analysis-grid">
-
-<div class="analysis-item">
-✔ NLP Processing
-</div>
-
-<div class="analysis-item">
-✔ Sentiment Analysis
-</div>
-
-<div class="analysis-item">
-✔ Spam Pattern Detection
-</div>
-
-<div class="analysis-item">
-✔ Behavioral Analysis
-</div>
-
-<div class="analysis-item">
-✔ Trust Score Evaluation
-</div>
-
-<div class="analysis-item">
-✔ Final Prediction Generated
-</div>
-
-</div>
-
-</div>
-
-<a href="/" class="back-btn">
-
-Analyze Another Review
-
-</a>
-
-</div>
-
-</div>
+    </div>
 
 </body>
 
