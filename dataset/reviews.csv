@@ -1,0 +1,126 @@
+review,category,rating,account_age_days,verified_purchase,helpful_votes,sentiment,label
+"This product is amazing and works perfectly",Electronics,5,400,Yes,25,positive,real
+"Worst product waste of money",Electronics,1,350,Yes,12,negative,real
+"Buy now best product guaranteed",Beauty,5,2,No,0,positive,fake
+"Amazing amazing five stars buy now",Fashion,5,1,No,0,positive,fake
+"Average product works okay",Home,3,250,Yes,3,neutral,real
+"Limited stock order immediately",Electronics,5,5,No,0,positive,fake
+"Very useful and durable product",Kitchen,4,500,Yes,18,positive,real
+"Terrible quality not recommended",Fashion,1,600,Yes,9,negative,real
+"Excellent mobile phone with great battery",Mobile Phones,5,700,Yes,40,positive,real
+"Best gaming laptop buy immediately",Gaming,5,3,No,0,positive,fake
+"Good book for learning python",Books,4,900,Yes,15,positive,real
+"Cheap fake jewelry do not buy",Jewelry,1,500,Yes,8,negative,real
+"Top trending sports shoes buy now",Sports,5,4,No,0,positive,fake
+"Healthy and useful fitness product",Fitness,4,450,Yes,12,positive,real
+"Excellent gaming laptop performance",Gaming,5,500,Yes,40,positive,real
+"Best gaming setup buy now",Gaming,5,2,No,0,positive,fake
+"Very useful sports shoes",Sports,4,300,Yes,15,positive,real
+"Top sports item limited stock",Sports,5,1,No,0,positive,fake
+"Good pet food quality",Pet Supplies,4,600,Yes,20,positive,real
+"Best pet product order now",Pet Supplies,5,3,No,0,positive,fake
+review,category,rating,account_age_days,verified_purchase,helpful_votes,sentiment,label
+"This mobile phone has excellent battery life",Mobile Phones,5,560,Yes,34,positive,real
+"Best phone ever buy immediately",Mobile Phones,5,3,No,0,positive,fake
+"Camera quality is impressive and sharp",Mobile Phones,4,430,Yes,20,positive,real
+"Limited stock hurry and buy now",Mobile Phones,5,1,No,0,positive,fake
+"Very smooth performance and good display",Electronics,5,700,Yes,45,positive,real
+"Waste of money totally useless",Electronics,1,480,Yes,8,negative,real
+"Top quality product guaranteed",Electronics,5,2,No,0,positive,fake
+"Excellent sound quality and bass",Electronics,4,620,Yes,19,positive,real
+"This laptop handles gaming perfectly",Laptops,5,900,Yes,50,positive,real
+"Cheap laptop broke within days",Laptops,1,350,Yes,7,negative,real
+"Buy this amazing gaming laptop now",Laptops,5,4,No,0,positive,fake
+"Keyboard and display quality are great",Laptops,4,520,Yes,18,positive,real
+"Very comfortable sports shoes",Sports,4,650,Yes,22,positive,real
+"Best sports item available online",Sports,5,2,No,0,positive,fake
+"Good grip and lightweight design",Sports,5,730,Yes,25,positive,real
+"Poor stitching and bad material",Sports,1,500,Yes,6,negative,real
+"This gaming mouse is very responsive",Gaming,5,450,Yes,30,positive,real
+"Ultimate gaming product buy now",Gaming,5,1,No,0,positive,fake
+"RGB lighting looks fantastic",Gaming,4,370,Yes,14,positive,real
+"Stopped working after one week",Gaming,1,280,Yes,5,negative,real
+"Very stylish and comfortable dress",Fashion,5,580,Yes,17,positive,real
+"Cheap quality cloth not recommended",Fashion,1,400,Yes,6,negative,real
+"Trending fashion product buy today",Fashion,5,2,No,0,positive,fake
+"Fabric quality feels premium",Fashion,4,690,Yes,21,positive,real
+"This lipstick lasts all day long",Beauty,5,740,Yes,28,positive,real
+"Skin irritation after using this",Beauty,1,420,Yes,5,negative,real
+"Best beauty product ever buy now",Beauty,5,1,No,0,positive,fake
+"Very smooth texture and fragrance",Beauty,4,560,Yes,16,positive,real
+"Kitchen blender works efficiently",Kitchen,5,810,Yes,32,positive,real
+"Motor stopped after few uses",Kitchen,1,350,Yes,4,negative,real
+"Top kitchen product limited offer",Kitchen,5,2,No,0,positive,fake
+"Easy to clean and powerful machine",Kitchen,4,640,Yes,18,positive,real
+"This sofa is very comfortable",Furniture,5,1000,Yes,38,positive,real
+"Wood quality is terrible",Furniture,1,530,Yes,6,negative,real
+"Luxury furniture at lowest price",Furniture,5,1,No,0,positive,fake
+"Elegant design and strong build",Furniture,4,700,Yes,19,positive,real
+"Very useful python programming book",Books,5,870,Yes,27,positive,real
+"Pages quality is poor",Books,2,450,Yes,4,negative,real
+"Best book available order now",Books,5,3,No,0,positive,fake
+"Concepts explained very clearly",Books,4,660,Yes,14,positive,real
+"Healthy protein supplement works well",Health,5,620,Yes,31,positive,real
+"Caused stomach pain after use",Health,1,310,Yes,5,negative,real
+"Miracle health product buy now",Health,5,2,No,0,positive,fake
+"Improved my fitness significantly",Health,4,580,Yes,16,positive,real
+"Excellent treadmill for workouts",Fitness,5,760,Yes,33,positive,real
+"Machine stopped suddenly",Fitness,1,420,Yes,6,negative,real
+"Top fitness product order today",Fitness,5,2,No,0,positive,fake
+"Strong frame and smooth running",Fitness,4,680,Yes,17,positive,real
+"This car vacuum cleaner is useful",Automobile,5,830,Yes,29,positive,real
+"Poor suction power and noisy",Automobile,1,470,Yes,5,negative,real
+"Best automobile accessory buy now",Automobile,5,1,No,0,positive,fake
+"Very durable and easy to use",Automobile,4,620,Yes,15,positive,real
+"Beautiful necklace and elegant design",Jewelry,5,920,Yes,36,positive,real
+"Looks fake and cheap",Jewelry,1,390,Yes,4,negative,real
+"Luxury jewelry lowest price",Jewelry,5,1,No,0,positive,fake
+"Packaging and quality are amazing",Jewelry,4,710,Yes,18,positive,real
+"Fresh groceries delivered quickly",Groceries,5,500,Yes,24,positive,real
+"Vegetables were spoiled",Groceries,1,280,Yes,3,negative,real
+"Best grocery deal hurry now",Groceries,5,2,No,0,positive,fake
+"Very fresh fruits and vegetables",Groceries,4,620,Yes,14,positive,real
+"My child loved this toy set",Toys,5,670,Yes,26,positive,real
+"Plastic quality is very poor",Toys,1,340,Yes,5,negative,real
+"Top selling toy buy immediately",Toys,5,1,No,0,positive,fake
+"Safe and fun for kids",Toys,4,590,Yes,15,positive,real
+"This dog food is nutritious",Pet Supplies,5,780,Yes,30,positive,real
+"My pet refused to eat it",Pet Supplies,1,410,Yes,4,negative,real
+"Best pet product available now",Pet Supplies,5,2,No,0,positive,fake
+"Packaging and quality are good",Pet Supplies,4,630,Yes,16,positive,real
+"Vacuum cleaner works perfectly",Home,5,860,Yes,35,positive,real
+"Stopped working after month",Home,1,390,Yes,5,negative,real
+"Top home appliance buy today",Home,5,1,No,0,positive,fake
+"Very useful for daily cleaning",Home,4,710,Yes,19,positive,real
+"Wireless earbuds have amazing sound",Electronics,5,940,Yes,40,positive,real
+"Battery drains too quickly",Electronics,2,510,Yes,6,negative,real
+"Best earbuds online limited offer",Electronics,5,2,No,0,positive,fake
+"Noise cancellation is excellent",Electronics,4,680,Yes,17,positive,real
+"This smartwatch tracks health accurately",Mobile Phones,5,780,Yes,29,positive,real
+"Screen cracked very easily",Mobile Phones,1,370,Yes,5,negative,real
+"Must buy smartwatch right now",Mobile Phones,5,1,No,0,positive,fake
+"Very sleek and responsive watch",Mobile Phones,4,620,Yes,16,positive,real
+"Gaming keyboard keys feel smooth",Gaming,5,850,Yes,31,positive,real
+"Stopped responding within days",Gaming,1,420,Yes,4,negative,real
+"Top gaming accessory buy now",Gaming,5,2,No,0,positive,fake
+"RGB effects look beautiful",Gaming,4,690,Yes,18,positive,real
+"This jacket is warm and stylish",Fashion,5,760,Yes,28,positive,real
+"Color faded after washing",Fashion,1,340,Yes,4,negative,real
+"Limited fashion sale order now",Fashion,5,1,No,0,positive,fake
+"Perfect fitting and soft material",Fashion,4,610,Yes,17,positive,real
+"This shampoo reduced hair fall",Beauty,5,870,Yes,32,positive,real
+"Caused dryness and itching",Beauty,1,410,Yes,5,negative,real
+"Best shampoo on internet",Beauty,5,2,No,0,positive,fake
+"Hair feels soft and healthy",Beauty,4,730,Yes,19,positive,real
+"Excellent microwave performance",Kitchen,5,920,Yes,37,positive,real
+"Heating is uneven and slow",Kitchen,1,390,Yes,5,negative,real
+"Top microwave lowest price",Kitchen,5,1,No,0,positive,fake
+"Easy controls and spacious design",Kitchen,4,700,Yes,18,positive,real
+"This study table is sturdy",Furniture,5,860,Yes,33,positive,real
+"Leg broke after few weeks",Furniture,1,350,Yes,4,negative,real
+"Premium furniture limited stock",Furniture,5,1,No,0,positive,fake
+"Very spacious and stylish",Furniture,4,640,Yes,16,positive,real
+"Useful guide for machine learning",Books,5,910,Yes,35,positive,real
+"Printing quality is terrible",Books,2,400,Yes,5,negative,real
+"Best educational book buy now",Books,5,2,No,0,positive,fake
+"Examples are easy to understand",Books,4,720,Yes,17,positive,real

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AI Fake Review Detection System
+    </title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="animated-bg"></div>
+
+<div class="main-container">
+
+<div class="glass-card">
+
+<div class="hero-section">
+
+<div class="hero-badge">
+AI Powered Machine Learning System
+</div>
+
+<h1>
+Fake Review Detection System
+</h1>
+
+<p>
+Advanced Artificial Intelligence platform for detecting
+fake, suspicious and genuine product reviews using
+Natural Language Processing, Sentiment Analysis
+and Behavioral Pattern Analysis.
+</p>
+
+</div>
+
+<form action="/predict" method="POST">
+
+<div class="section-title">
+
+Review Information
+
+</div>
+
+<div class="input-group">
+
+<label>
+Review Text
+</label>
+
+<textarea
+name="review"
+placeholder="Write or paste product review here..."
+required>
+</textarea>
+
+</div>
+
+<div class="grid-2">
+
+<div class="input-group">
+
+<label>
+Product Category
+</label>
+
+<select name="category" required>
+
+<option value="" disabled selected>
+Select Product Category
+</option>
+
+<option>Electronics</option>
+<option>Mobile Phones</option>
+<option>Laptops</option>
+<option>Gaming</option>
+<option>Fashion</option>
+<option>Beauty</option>
+<option>Kitchen</option>
+<option>Furniture</option>
+<option>Books</option>
+<option>Sports</option>
+<option>Health</option>
+<option>Fitness</option>
+<option>Automobile</option>
+<option>Jewelry</option>
+<option>Groceries</option>
+<option>Toys</option>
+<option>Pet Supplies</option>
+<option>Home Appliances</option>
+<option>Smart Gadgets</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>
+Product Rating
+</label>
+
+<select name="rating" required>
+
+<option value="" disabled selected>
+Select Product Rating
+</option>
+
+<option value="1">
+⭐ 1 Star
+</option>
+
+<option value="2">
+⭐⭐ 2 Stars
+</option>
+
+<option value="3">
+⭐⭐⭐ 3 Stars
+</option>
+
+<option value="4">
+⭐⭐⭐⭐ 4 Stars
+</option>
+
+<option value="5">
+⭐⭐⭐⭐⭐ 5 Stars
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="section-title">
+
+User Behavioral Analysis
+
+</div>
+
+<div class="grid-3">
+
+<div class="input-group">
+
+<label>
+Account Age
+</label>
+
+<select name="account_age" required>
+
+<option value="" disabled selected>
+Select Account Age
+</option>
+
+<option value="7">
+Less Than 1 Week
+</option>
+
+<option value="30">
+Less Than 1 Month
+</option>
+
+<option value="90">
+1 - 3 Months
+</option>
+
+<option value="180">
+3 - 6 Months
+</option>
+
+<option value="365">
+6 - 12 Months
+</option>
+
+<option value="730">
+1 - 2 Years
+</option>
+
+<option value="1500">
+More Than 2 Years
+</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>
+Helpful Votes
+</label>
+
+<input
+type="number"
+name="helpful_votes"
+placeholder="Example: 15"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>
+User Review Count
+</label>
+
+<input
+type="number"
+name="review_count"
+placeholder="Example: 25"
+required>
+
+</div>
+
+</div>
+
+<div class="grid-2">
+
+<div class="input-group">
+
+<label>
+Verified Purchase
+</label>
+
+<select
+name="verified_purchase"
+required>
+
+<option value="" disabled selected>
+Select Verification Status
+</option>
+
+<option>
+Yes
+</option>
+
+<option>
+No
+</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>
+Review Posting Frequency
+</label>
+
+<select
+name="posting_frequency"
+required>
+
+<option value="" disabled selected>
+Select Posting Frequency
+</option>
+
+<option>
+Very Rare
+</option>
+
+<option>
+Occasional
+</option>
+
+<option>
+Frequent
+</option>
+
+<option>
+Very Frequent
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="features-box">
+
+<div class="feature-item">
+✔ NLP Text Analysis
+</div>
+
+<div class="feature-item">
+✔ Sentiment Detection
+</div>
+
+<div class="feature-item">
+✔ Behavioral Monitoring
+</div>
+
+<div class="feature-item">
+✔ Fake Pattern Recognition
+</div>
+
+<div class="feature-item">
+✔ AI Trust Scoring
+</div>
+
+<div class="feature-item">
+✔ Machine Learning Prediction
+</div>
+
+</div>
+
+<button type="submit">
+
+Analyze Review With AI
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

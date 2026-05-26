@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AI Review Analysis
+    </title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="animated-bg"></div>
+
+<div class="main-container">
+
+<div class="result-card">
+
+<div class="result-header">
+
+<h1>
+AI Review Analysis Report
+</h1>
+
+<p>
+Machine Learning Based Fake Review Detection
+</p>
+
+</div>
+
+<!-- Main Result -->
+
+{% if result == "Fake Review" %}
+
+<div class="result-banner fake-banner">
+
+<h2>
+⚠ Fake Review Detected
+</h2>
+
+<p>
+This review contains suspicious behavioral
+and linguistic patterns.
+</p>
+
+</div>
+
+{% elif result == "Suspicious Review" %}
+
+<div class="result-banner suspicious-banner">
+
+<h2>
+⚡ Suspicious Review
+</h2>
+
+<p>
+This review requires manual verification.
+</p>
+
+</div>
+
+{% else %}
+
+<div class="result-banner genuine-banner">
+
+<h2>
+✔ Genuine Review
+</h2>
+
+<p>
+This review appears authentic and trustworthy.
+</p>
+
+</div>
+
+{% endif %}
+
+<!-- Scores -->
+
+<div class="score-grid">
+
+<div class="score-card fake-score">
+
+<h3>
+Fake Score
+</h3>
+
+<p>
+{{ fake_probability }}%
+</p>
+
+</div>
+
+<div class="score-card suspicious-score">
+
+<h3>
+Suspicious Score
+</h3>
+
+<p>
+{{ suspicious_probability }}%
+</p>
+
+</div>
+
+<div class="score-card genuine-score">
+
+<h3>
+Genuine Score
+</h3>
+
+<p>
+{{ genuine_probability }}%
+</p>
+
+</div>
+
+</div>
+
+<!-- Recommendation -->
+
+<div class="recommendation-section">
+
+<h2>
+Overall Recommendation
+</h2>
+
+<p>
+{{ recommendation }}
+</p>
+
+</div>
+
+<!-- Details -->
+
+<div class="details-grid">
+
+<div class="detail-box">
+
+<h3>
+Category
+</h3>
+
+<p>
+{{ category }}
+</p>
+
+</div>
+
+<div class="detail-box">
+
+<h3>
+Rating
+</h3>
+
+<p>
+{{ rating }} ⭐
+</p>
+
+</div>
+
+<div class="detail-box">
+
+<h3>
+Account Age
+</h3>
+
+<p>
+{{ account_age }} Days
+</p>
+
+</div>
+
+<div class="detail-box">
+
+<h3>
+Helpful Votes
+</h3>
+
+<p>
+{{ helpful_votes }}
+</p>
+
+</div>
+
+</div>
+
+<!-- Review -->
+
+<div class="review-section">
+
+<h2>
+Review Content
+</h2>
+
+<p>
+{{ review }}
+</p>
+
+</div>
+
+<!-- Analysis -->
+
+<div class="analysis-section">
+
+<h2>
+AI Analysis Completed
+</h2>
+
+<div class="analysis-grid">
+
+<div class="analysis-item">
+✔ NLP Processing
+</div>
+
+<div class="analysis-item">
+✔ Sentiment Analysis
+</div>
+
+<div class="analysis-item">
+✔ Spam Pattern Detection
+</div>
+
+<div class="analysis-item">
+✔ Behavioral Analysis
+</div>
+
+<div class="analysis-item">
+✔ Trust Score Evaluation
+</div>
+
+<div class="analysis-item">
+✔ Final Prediction Generated
+</div>
+
+</div>
+
+</div>
+
+<a href="/" class="back-btn">
+
+Analyze Another Review
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
