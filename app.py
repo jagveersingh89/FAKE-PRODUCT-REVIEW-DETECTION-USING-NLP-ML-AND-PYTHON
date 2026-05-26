@@ -245,29 +245,29 @@ def predict():
 
     return render_template(
 
-        'result.html',
+    'result.html',
 
-        result=result,
+    result=result,
 
-        fake_score=fake_score,
+    fake_score=fake_score,
 
-        suspicious_score=suspicious_score,
+    suspicious_score=suspicious_score,
 
-        genuine_score=genuine_score,
+    genuine_score=genuine_score,
 
-        recommendation=recommendation,
+    recommendation=recommendation,
 
-        review=review,
+    review=review,
 
-        category=category,
+    category=category,
 
-        rating=rating,
+    rating=rating,
 
-        account_age=account_age,
+    account_age=account_age,
 
-        helpful_votes=helpful_votes
+    helpful_votes=helpful_votes
 
-    )
+)
 
 # =========================
 # RUN APP
